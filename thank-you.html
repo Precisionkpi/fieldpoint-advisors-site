@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thanks — FieldPoint Advisors</title>
+  <meta name="description" content="We received your discovery call request. We'll be in touch within one business day." />
+  <meta name="theme-color" content="#1b4332" />
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .thanks-wrap {
+      min-height: 100vh;
+      display: grid; place-items: center;
+      padding: 80px 24px;
+      background:
+        radial-gradient(700px 400px at 100% 0%, var(--gold-soft), transparent 60%),
+        radial-gradient(700px 400px at 0% 100%, var(--sage-soft), transparent 60%),
+        var(--paper);
+    }
+    .thanks-card {
+      max-width: 580px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 56px 44px;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+    .thanks-mark {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green), var(--forest));
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 24px -10px rgba(20,83,45,.5);
+    }
+    .thanks-card h1 {
+      font-family: var(--serif);
+      color: var(--forest);
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      font-weight: 500;
+    }
+    .thanks-card p {
+      color: var(--ink-2);
+      font-size: 1.1rem;
+      margin: 0 0 16px;
+      line-height: 1.55;
+    }
+    .thanks-card .small {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-top: 24px;
+    }
+    .thanks-back {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 12px 24px;
+      border-radius: 999px;
+      background: var(--forest);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+    }
+    .thanks-back:hover { background: var(--navy-2); transform: translateY(-1px); }
+    .thanks-logo { max-width: 160px; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <div class="thanks-wrap">
+    <div class="thanks-card">
+      <img src="assets/brand/logo.png" alt="FieldPoint Advisors" class="thanks-logo" />
+      <span class="thanks-mark" aria-hidden="true">✓</span>
+      <h1>Thanks — we got it.</h1>
+      <p>
+        Your discovery call request landed safely with Ben and Chris.
+        We'll be in touch within <strong>one business day</strong>.
+      </p>
+      <p class="small">
+        Most calls happen within the week. If you'd like to send a follow-up,
+        reach us at <a href="mailto:hello@fieldpointadvisor.com">hello@fieldpointadvisor.com</a>.
+      </p>
+      <a href="/" class="thanks-back">← Back to fieldpointadvisor.com</a>
+    </div>
+  </div>
+</body>
+</html>

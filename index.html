@@ -664,7 +664,18 @@
           </ul>
         </div>
 
-        <form class="contact-form reveal" onsubmit="event.preventDefault(); this.querySelector('.form-status').hidden = false; this.reset();">
+        <form
+          class="contact-form reveal"
+          name="discovery-call"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="discovery-call" />
+          <p hidden>
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required autocomplete="name" />
@@ -718,9 +729,6 @@
             <textarea id="message" name="message" rows="3" placeholder="e.g. WIP doesn't tie, payroll variance, can't trust GM by division…"></textarea>
           </div>
           <button type="submit" class="btn btn-gold btn-lg btn-block">Request the call</button>
-          <p class="form-status" hidden role="status">
-            ✓ Thanks — we'll be in touch within one business day.
-          </p>
           <p class="form-fine">We respond within one business day. Your info stays with us — no marketing lists.</p>
         </form>
       </div>
