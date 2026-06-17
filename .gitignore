@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Python helper (not needed at deploy)
+__pycache__/
+*.pyc
+
+# Local-only / dev
+.claude/
+.netlify/
+node_modules/
