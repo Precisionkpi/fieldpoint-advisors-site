@@ -924,6 +924,103 @@ h2 em, h1 em { font-style: italic; color: var(--navy); }
 .process h3 { font-size: 1.1rem; color: var(--navy); margin-bottom: 6px; }
 .process p { color: var(--muted); font-size: .92rem; margin: 0; }
 
+/* ===== Dual-track process (Aspire + CPA) ===== */
+.process-tracks {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
+  max-width: 1100px; margin: 0 auto;
+  align-items: start;
+}
+.process-track {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  position: relative; overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.process-track::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+}
+.process-track-aspire::before { background: linear-gradient(90deg, var(--forest), var(--sage)); }
+.process-track-cpa::before { background: linear-gradient(90deg, var(--gold), var(--soil)); }
+.process-track:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+.process-track-header {
+  padding-bottom: 20px; margin-bottom: 26px;
+  border-bottom: 1px dashed var(--line);
+  text-align: center;
+}
+.process-track-eyebrow {
+  display: inline-block;
+  font-family: var(--sans); font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .14em;
+  padding: 5px 12px; border-radius: 999px;
+  margin-bottom: 12px; font-weight: 700;
+}
+.process-track-aspire .process-track-eyebrow {
+  color: var(--forest); background: rgba(45,106,79,.12);
+  border: 1px solid rgba(45,106,79,.30);
+}
+.process-track-cpa .process-track-eyebrow {
+  color: var(--soil); background: rgba(197,165,114,.18);
+  border: 1px solid rgba(197,165,114,.40);
+}
+.process-track-header h3 {
+  font-family: var(--serif); font-size: 1.45rem;
+  color: var(--forest); margin: 0 0 6px;
+  font-weight: 500;
+}
+.process-track-lead {
+  font-family: var(--sans); font-size: .92rem;
+  color: var(--muted); margin: 0;
+}
+.process-track-lead strong { color: var(--forest); font-weight: 600; }
+.process-track-cpa .process-track-lead strong { color: var(--soil); }
+
+.process-track-steps {
+  display: flex; flex-direction: column; gap: 22px;
+  margin: 0; padding: 0; list-style: none;
+}
+.process-track-steps > li {
+  display: grid; grid-template-columns: 40px 1fr; gap: 16px;
+  align-items: start;
+  background: transparent; border: 0; padding: 0;
+  position: static;
+  transform: none !important;
+  box-shadow: none !important;
+}
+.process-track-steps > li:hover { transform: none; box-shadow: none; }
+.process-track-steps .step-num {
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  font-family: var(--serif); font-size: 1rem; font-weight: 600;
+  margin-bottom: 0;
+  box-shadow: 0 0 0 4px var(--paper-2);
+  flex-shrink: 0;
+}
+.process-track-aspire .process-track-steps > li:nth-child(1) .step-num { background: var(--sage); color: var(--forest); }
+.process-track-aspire .process-track-steps > li:nth-child(2) .step-num { background: var(--green); color: #fff; }
+.process-track-aspire .process-track-steps > li:nth-child(3) .step-num { background: var(--forest); color: #fff; }
+.process-track-aspire .process-track-steps > li:nth-child(4) .step-num { background: var(--forest); color: #fff; }
+.process-track-aspire .process-track-steps > li:nth-child(5) .step-num { background: var(--forest-2); color: #fff; }
+.process-track-cpa .process-track-steps > li:nth-child(1) .step-num { background: var(--gold-soft); color: var(--soil); }
+.process-track-cpa .process-track-steps > li:nth-child(2) .step-num { background: var(--gold); color: var(--forest); }
+.process-track-cpa .process-track-steps > li:nth-child(3) .step-num { background: var(--gold-2); color: #fff; }
+.process-track-cpa .process-track-steps > li:nth-child(4) .step-num { background: var(--soil); color: #fff; }
+.process-track-cpa .process-track-steps > li:nth-child(5) .step-num { background: var(--soil-2); color: #fff; }
+.process-track-steps h4 {
+  font-family: var(--serif); font-size: 1.08rem;
+  color: var(--forest); margin: 4px 0 4px;
+  font-weight: 600;
+}
+.process-track-cpa .process-track-steps h4 { color: var(--soil-2); }
+.process-track-steps p {
+  margin: 0; color: var(--ink-2); font-size: .92rem; line-height: 1.5;
+}
+
+@media (max-width: 880px) {
+  .process-tracks { grid-template-columns: 1fr; max-width: 560px; }
+}
+
 /* ---------- Quote ---------- */
 .quote {
   max-width: 920px; margin: 0 auto; text-align: center;
