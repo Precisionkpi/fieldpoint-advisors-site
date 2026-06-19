@@ -1009,7 +1009,17 @@ h2 em, h1 em { font-style: italic; color: var(--navy); }
 }
 .brand-footer .brand-name { color: #fff; }
 .brand-footer .brand-tag { color: var(--gold); }
-.footer-blurb { margin: 18px 0 0; font-size: .95rem; max-width: 42ch; color: #a8b29a; }
+.footer-tagline {
+  margin: 22px 0 0;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 38ch;
+  color: var(--gold);
+  letter-spacing: .005em;
+}
+.footer-blurb { margin: 14px 0 0; font-size: .92rem; max-width: 42ch; color: #a8b29a; }
 .footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .footer-cols h4 {
   font-family: var(--sans); font-size: .8rem; text-transform: uppercase;
