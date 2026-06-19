@@ -45,6 +45,18 @@ for y in range(h):
             new_a = max(0, 255 - new_a)
             px[x, y] = (r, g, b, new_a)
             softened += 1
+# Auto-crop transparent margins so the logo fills the frame tightly
+bbox = transparent.getbbox()
+if bbox:
+    pad = 8  # tiny visual breathing room
+    left, top, right, bottom = bbox
+    left = max(0, left - pad)
+    top = max(0, top - pad)
+    right = min(w, right + pad)
+    bottom = min(h, bottom + pad)
+    transparent = transparent.crop((left, top, right, bottom))
+    print(f"  cropped {w}x{h} -> {transparent.size}")
+
 transparent.save(TRANSPARENT_OUT, "PNG", optimize=True)
 print(f"  -> {TRANSPARENT_OUT}  ({made_transparent:,} px cleared, {softened:,} feathered)")
 
@@ -52,8 +64,9 @@ print(f"  -> {TRANSPARENT_OUT}  ({made_transparent:,} px cleared, {softened:,} f
 light = transparent.copy()
 px = light.load()
 recolored = 0
-for y in range(h):
-    for x in range(w):
+lw, lh = light.size
+for y in range(lh):
+    for x in range(lw):
         r, g, b, a = px[x, y]
         if a == 0:
             continue
