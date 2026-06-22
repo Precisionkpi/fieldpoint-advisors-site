@@ -334,8 +334,9 @@ h2 em, h1 em { font-style: italic; color: var(--navy); }
   display: flex; flex-direction: column; gap: 8px; color: var(--ink-2); font-size: .95rem;
   border-top: 1px solid var(--line); padding-top: 22px; max-width: 520px;
 }
-.hero-trust li::before { content: '✓'; color: var(--green); margin-right: 10px; font-weight: 700; }
-.hero-trust strong { color: var(--navy); font-weight: 600; }
+.hero-trust li::before { content: '✓'; color: var(--gold); margin-right: 10px; font-weight: 700; text-shadow: 0 1px 4px rgba(15,42,31,.6); }
+.hero-trust strong { color: #fff; font-weight: 700; text-shadow: 0 1px 8px rgba(15,42,31,.7); }
+.hero-trust li { text-shadow: 0 1px 6px rgba(15,42,31,.55); }
 
 /* hero card */
 .hero-card {
